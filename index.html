@@ -9,8 +9,12 @@
 	</head>
 	<body>
 		<main>
-			<form action="">
-				<input type="text" id="suchen" />
+			<form action="" onsubmit="return false">
+				<input type="date" id="datum" />
+
+				<input type="text" id="suchen" placeholder="Suchtext eingeben" />
+				<button id="buttonSuche">Suchen</button>
+				<label id="labelSuche" for="suchen"></label>
 			</form>
 
 			<div class="newsAusgabe"></div>

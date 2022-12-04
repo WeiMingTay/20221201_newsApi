@@ -18,6 +18,17 @@ HEADER
 /* ==========
 MAIN
 ========== */
+form {
+  padding: 1rem;
+}
+form #datum {
+  display: block;
+}
+form #labelSuche {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+
 .newsAusgabe {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
