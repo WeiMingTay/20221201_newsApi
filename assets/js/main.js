@@ -1,12 +1,12 @@
 let input = document.querySelector("suchen");
 fetch(
-	"https://newsapi.org/v2/everything?q=tesla&from=2022-11-15&sortBy=publishedAt&apiKey=61a51e6230e145a2b1bda71a11df1048"
+	"https://newsapi.org/v2/everything?q=movies&from=2022-12-01&sortBy=publishedAt&apiKey=61a51e6230e145a2b1bda71a11df1048"
 )
 	.then((response) => response.json())
 	.then((data) => {
 		console.log(data.articles[2]);
 
-		for (let e = 0; e < data.articles.length; e++) {
+		for (let e = 0; e < 30; e++) { //data.articles.length
 			let ausgabe = document.querySelector(".newsAusgabe");
 			ausgabe.class = "ausgabe";
 
