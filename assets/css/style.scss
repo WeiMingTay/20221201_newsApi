@@ -33,13 +33,21 @@ form {
 		font-size: 1.3rem;
 	}
 	#sprache {
+		/* font-size: 2rem; */
 		input {
 			display: none;
 		}
 		label {
-			font-size: 2rem;
+			transition: all 250ms;
 		}
-
+		.spracheChecked {
+			font-size: 2.1rem;
+			filter: grayscale(0);
+		}
+		.spracheUnchecked {
+			font-size: 1.9rem;
+			filter: grayscale(1);
+		}
 	}
 }
 // Artikel

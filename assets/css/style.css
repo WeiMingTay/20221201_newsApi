@@ -31,11 +31,22 @@ form #labelSuche {
   text-transform: uppercase;
   font-size: 1.3rem;
 }
+form #sprache {
+  /* font-size: 2rem; */
+}
 form #sprache input {
   display: none;
 }
 form #sprache label {
-  font-size: 2rem;
+  transition: all 250ms;
+}
+form #sprache .spracheChecked {
+  font-size: 2.1rem;
+  filter: grayscale(0);
+}
+form #sprache .spracheUnchecked {
+  font-size: 1.9rem;
+  filter: grayscale(1);
 }
 
 .newsAusgabe {

@@ -1,8 +1,9 @@
 let buttonSuche = document.querySelector("#buttonSuche");
-let datum = document.querySelector("#datum");
+let datumInput = document.querySelector("#datum");
+let datum ="";
 
 let ausgabe = document.querySelector(".newsAusgabe");
-let sprache = "";
+let sprache = "de";
 // Sprachauswahl
 let sprachContainer = document.getElementById("sprache");
 
@@ -14,21 +15,37 @@ let enLabel = document.getElementById("enLabel");
 sprachContainer.addEventListener("input", () => {
 	if (deutsch.checked) {
 		sprache = "de";
-		enLabel.style.filter = "grayscale(1)";
-		deLabel.style.filter = "grayscale(0)";
-		enLabel.style.fontSize = "1.9rem";
-		deLabel.style.fontSize = "2.1rem";
+		enLabel.classList.remove("spracheChecked");
+		deLabel.classList.remove("spracheUnchecked");
+		enLabel.classList.add("spracheUnchecked");
+		deLabel.classList.add("spracheChecked");
 	} else if (englisch.checked) {
 		sprache = "en";
-		enLabel.style.filter = "grayscale(0)";
-		deLabel.style.filter = "grayscale(1)";
-		deLabel.style.fontSize = "1.9rem";
-		enLabel.style.fontSize = "2.1rem";
+		enLabel.classList.remove("spracheUnchecked");
+		deLabel.classList.remove("spracheChecked");
+		enLabel.classList.add("spracheChecked");
+		deLabel.classList.add("spracheUnchecked");
 	}
 });
 console.log(sprache);
 
+// Datum erkennen/ ausgeben
+function datumErkennen() {
+if (datumInput.value === "") {
+	datum = new Date().toLocaleDateString("zh-Hans-CN").replaceAll("/", "-");
+} else {
+	datum = datumInput.value
+}
+}
+datumErkennen()
+console.log(datum+": "+typeof(datum));
+console.log(datumInput.value+": "+typeof(datumInput.value));
+console.log(datumInput);
+
+// Funktion
+
 buttonSuche.addEventListener("click", () => {
+	datumErkennen()
 	// "Reset" der Newsausgabe
 	ausgabe.innerHTML = "";
 
@@ -36,11 +53,7 @@ buttonSuche.addEventListener("click", () => {
 	let input = document.querySelector("#suchen");
 	let inputLabel = document.querySelector("#labelSuche");
 
-	// Datum erkennen/ ausgeben
-	if (typeof datum.value == "string") {
-		datum = new Date().toLocaleDateString("zh-Hans-CN").replaceAll("/", "-");
-	}
-	console.log(datum);
+	
 
 	// Suchausgabe im Label
 	inputLabel.innerHTML = input.value;
