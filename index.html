@@ -8,15 +8,24 @@
 		<link rel="stylesheet" href="assets/css/style.css" />
 	</head>
 	<body>
-		<main>
+		<header>
 			<form action="" onsubmit="return false">
-				<input type="date" id="datum" />
+				<div>
+					<input type="date" id="datum" />
 
-				<input type="text" id="suchen" placeholder="Suchtext eingeben" />
-				<button id="buttonSuche">Suchen</button>
-				<label id="labelSuche" for="suchen"></label>
+					<input type="text" id="suchen" placeholder="Suchtext eingeben" />
+					<button id="buttonSuche">Suchen</button>
+					<label id="labelSuche" for="suchen"></label>
+				</div>
+				<div id="sprache">
+					<label for="de" id="deLabel">🇩🇪</label>
+					<input checked type="radio" name="sprache" id="de">
+					<label for="en" id="enLabel">🇬🇧</label>
+					<input type="radio" name="sprache" id="en">
+				</div>
 			</form>
-
+		</header>
+		<main>
 			<div class="newsAusgabe"></div>
 		</main>
 		<script src="assets/js/main.js"></script>
