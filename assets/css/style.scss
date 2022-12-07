@@ -5,12 +5,16 @@ Allgemein
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font: inherit;
 }
 body {
 	width: 100vw;
 	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
 		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
+// html {
+// 	color-scheme: dark light;
+// }
 /* ==========
 HEADER
 ========== */
@@ -60,6 +64,8 @@ form {
 	width: calc(100% - 2rem);
 	background-color: hsl(20, 25%, 95%);
 	padding: 1rem;
+	border-radius: 10px;
+	min-height: calc(100vh - 7rem);
 
 	.article,
 	> div {
@@ -68,16 +74,18 @@ form {
 		justify-content: space-between;
 		background-color: #fff;
 		min-height: 200px;
+		border-radius: 10px 10px 0 0;
 
-		.divImg {
+		> a {
 			overflow: hidden;
-			height: 50%;
+			height: 350px;
+			border-radius: 10px;
 			img {
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
 				&:hover {
-					transform: rotate(2deg) scale(1.2);
+					transform: rotate(-3deg) scale(1.1);
 				}
 			}
 		}
@@ -97,6 +105,7 @@ form {
 			}
 			h2 {
 				margin-bottom: 1rem;
+				font-weight: 600;
 			}
 			p {
 				margin-bottom: 0.25rem;
@@ -104,7 +113,7 @@ form {
 			date {
 				margin: 0.5rem auto;
 			}
-			a {
+			> a {
 				border: 1px solid black;
 				color: white;
 				padding: 0.5rem 2rem;

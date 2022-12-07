@@ -5,6 +5,7 @@ Allgemein
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font: inherit;
 }
 
 body {
@@ -58,6 +59,8 @@ form #sprache .spracheUnchecked {
   width: calc(100% - 2rem);
   background-color: hsl(20deg, 25%, 95%);
   padding: 1rem;
+  border-radius: 10px;
+  min-height: calc(100vh - 7rem);
 }
 .newsAusgabe .article,
 .newsAusgabe > div {
@@ -66,22 +69,24 @@ form #sprache .spracheUnchecked {
   justify-content: space-between;
   background-color: #fff;
   min-height: 200px;
+  border-radius: 10px 10px 0 0;
 }
-.newsAusgabe .article .divImg,
-.newsAusgabe > div .divImg {
+.newsAusgabe .article > a,
+.newsAusgabe > div > a {
   overflow: hidden;
-  height: 50%;
+  height: 350px;
+  border-radius: 10px;
 }
-.newsAusgabe .article .divImg img,
-.newsAusgabe > div .divImg img {
+.newsAusgabe .article > a img,
+.newsAusgabe > div > a img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.newsAusgabe .article .divImg img:hover,
-.newsAusgabe > div .divImg img:hover {
-  transform: rotate(2deg) scale(1.2);
+.newsAusgabe .article > a img:hover,
+.newsAusgabe > div > a img:hover {
+  transform: rotate(-3deg) scale(1.1);
 }
 .newsAusgabe .article .inhalt,
 .newsAusgabe .article > div,
@@ -107,6 +112,7 @@ form #sprache .spracheUnchecked {
 .newsAusgabe > div .inhalt h2,
 .newsAusgabe > div > div h2 {
   margin-bottom: 1rem;
+  font-weight: 600;
 }
 .newsAusgabe .article .inhalt p,
 .newsAusgabe .article > div p,
@@ -120,10 +126,10 @@ form #sprache .spracheUnchecked {
 .newsAusgabe > div > div date {
   margin: 0.5rem auto;
 }
-.newsAusgabe .article .inhalt a,
-.newsAusgabe .article > div a,
-.newsAusgabe > div .inhalt a,
-.newsAusgabe > div > div a {
+.newsAusgabe .article .inhalt > a,
+.newsAusgabe .article > div > a,
+.newsAusgabe > div .inhalt > a,
+.newsAusgabe > div > div > a {
   border: 1px solid black;
   color: white;
   padding: 0.5rem 2rem;
@@ -133,10 +139,10 @@ form #sprache .spracheUnchecked {
   margin: 0.5rem auto;
   border-radius: 15px;
 }
-.newsAusgabe .article .inhalt a:hover,
-.newsAusgabe .article > div a:hover,
-.newsAusgabe > div .inhalt a:hover,
-.newsAusgabe > div > div a:hover {
+.newsAusgabe .article .inhalt > a:hover,
+.newsAusgabe .article > div > a:hover,
+.newsAusgabe > div .inhalt > a:hover,
+.newsAusgabe > div > div > a:hover {
   scale: 0.99;
 }
 
